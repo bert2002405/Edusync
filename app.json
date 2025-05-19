@@ -1,0 +1,85 @@
+{
+  "expo": {
+    "name": "EduSync",
+    "fonts": [
+      "./assets/fonts/Entypo.ttf",
+      "./assets/fonts/Ionicons.ttf",
+      "./assets/fonts/MaterialIcons.ttf",
+      "./assets/fonts/MaterialCommunityIcons.ttf"
+    ],
+    "slug": "edusync",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.edusync.app",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Allow EduSync to access your photos to update your profile picture.",
+        "NSCameraUsageDescription": "Allow EduSync to access your camera to take a profile picture."
+      }
+    },
+    "android": {
+      "package": "com.edusync.app",
+      "versionCode": 1,
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.INTERNET"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "favicon": "./assets/favicon.png",
+      "output": "static"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ],
+      [
+        "@react-native-community/datetimepicker",
+        {
+          "androidMode": "default"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow EduSync to access your photos to update your profile picture.",
+          "cameraPermission": "Allow EduSync to access your camera to take a profile picture."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "newArchEnabled": true,
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "c98c2108-1670-4c92-b4b7-c9722ceb1480"
+      }
+    }
+  }
+}
